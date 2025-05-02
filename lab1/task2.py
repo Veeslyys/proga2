@@ -4,14 +4,6 @@ from typing import Type, Tuple, Union, Optional
 
 
 def retry(attempts: int = 3, delay: float = 1, exceptions: Optional[Tuple[Type[Exception], ...]] = None):
-    """
-    Декоратор для повторного выполнения функции при возникновении ошибок.
-
-    Параметры:
-        attempts (int): Количество попыток выполнения (по умолчанию 3)
-        delay (float): Задержка между попытками в секундах (по умолчанию 1)
-        exceptions (tuple): Кортеж исключений, которые нужно перехватывать (по умолчанию все)
-    """
 
     def decorator(func):
         @wraps(func)
