@@ -1,4 +1,4 @@
-from async_task1func import delayed_message
+from nesud.async_task1func import delayed_message
 import time
 import asyncio
 async def main():
